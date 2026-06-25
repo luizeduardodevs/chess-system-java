@@ -33,6 +33,12 @@ public class ChessMatch {
         return(ChessPiece) capturedPiece;
     }
 
+    public boolean[][] possibleMoves(ChessPosition sourcePosition){
+        Position positon = sourcePosition.toPosition();
+        validateSourcePosition(positon);
+        return board.piece(positon).possibleMoves();
+    }
+
     private Piece makeMove(Position source, Position target){
         Piece p = board.removePieces(source);
         Piece capturedPiece = board.removePieces(target);
