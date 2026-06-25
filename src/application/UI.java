@@ -57,8 +57,8 @@ public class UI {
     }
         System.out.println("  a b c d e f g h");
     }
-    public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves){
-        for(int i=0;i<pieces.length;i++){
+    public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves){//
+        for(int i=0;i<pieces.length;i++){//esse metodo e pra mostrar aonde as peças podem ir
             System.out.print((8-i)+" ");
             for(int j=0;j<pieces[i].length;j++){
                 printPiece(pieces[i][j],possibleMoves[i][j]);
@@ -68,7 +68,7 @@ public class UI {
         System.out.println("  a b c d e f g h");
     }
     private static void printPiece(ChessPiece piece, boolean background){
-        if(background){
+        if(background){//se for veradeiro sera pintando de azul
             System.out.print(ANSI_BLUE_BACKGROUND);
         }
         if(piece == null){//tabuleiro
